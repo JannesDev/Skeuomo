@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GIBSON-REGULAR.OTF">
+            <string>Gibson-Regular</string>
+        </array>
+        <array key="GIBSON-SEMIBOLD.OTF">
+            <string>Gibson-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AucationArtWorkScreen" customModule="Skeuomo" customModuleProvider="target">
+            <connections>
+                <outlet property="imgThemeBG" destination="ux3-ay-TyL" id="D8i-EJ-ECu"/>
+                <outlet property="pickerDataSet" destination="z43-bn-Uby" id="tDM-AO-DYz"/>
+                <outlet property="tblPostArtWork" destination="0H2-Ww-qMb" id="ljw-zl-6X1"/>
+                <outlet property="toolBarDone" destination="2Zo-Yt-cx8" id="kJb-is-Ftt"/>
+                <outlet property="view" destination="s28-0Q-8Jx" id="Gko-hd-MSo"/>
+                <outlet property="viewPickerview" destination="vQJ-Cw-xgV" id="ePC-Rj-5oX"/>
+            </connections>
+        </placeholder>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="s28-0Q-8Jx">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="ux3-ay-TyL">
+                    <frame key="frameInset"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="eKc-B7-ylg">
+                    <frame key="frameInset" height="64"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d2a-Mn-HN2">
+                            <frame key="frameInset" minX="8" minY="22" width="40" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="back.png"/>
+                            <connections>
+                                <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="fUh-qL-FVz"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auction Artwork" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fir-gT-wVN">
+                            <frame key="frameInset" minX="22.67%" minY="22" width="54.67%" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Gibson-Regular" family="Gibson" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.043137254899999998" green="0.043137254899999998" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0H2-Ww-qMb" customClass="TPKeyboardAvoidingTableView">
+                    <frame key="frameInset" minX="10" minY="64" maxX="10" maxY="38"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="8Ah-nE-HaC"/>
+                        <outlet property="delegate" destination="-1" id="VEJ-lJ-BAf"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vgY-cz-r6W">
+                    <frame key="frameInset" height="42" maxY="-4"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Gibson-SemiBold" family="Gibson" pointSize="14"/>
+                    <state key="normal" title="POST NOW">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPostNow:" destination="-1" eventType="touchUpInside" id="tMd-Xy-gxO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="76" y="31"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2Zo-Yt-cx8">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <items>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="Bbp-71-Bkh"/>
+                <barButtonItem tag="3" title="Done" id="Oza-ii-GQk">
+                    <connections>
+                        <action selector="btnClickedDone" destination="-1" id="FA4-9n-WdX"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="zz1-V1-EeM"/>
+            </items>
+            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="-381" y="-162"/>
+        </toolbar>
+        <view contentMode="scaleToFill" id="vQJ-Cw-xgV">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="e0J-AM-roF">
+                    <frame key="frameInset" height="260"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" id="z43-bn-Uby">
+                            <frame key="frameInset" minY="44" height="216"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="SeT-Nq-SfF"/>
+                                <outlet property="delegate" destination="-1" id="tl1-kA-JWd"/>
+                            </connections>
+                        </pickerView>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Jhr-zl-qyf">
+                            <frame key="frameInset" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <barButtonItem title="Cancel" id="LLZ-P8-kvc">
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="btnCancelPickerView:" destination="-1" id="guk-fK-TP7"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="ujI-pS-pb5"/>
+                                <barButtonItem title="Done" id="bYX-hf-kfR">
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="btnDonePickerView:" destination="-1" id="Hdr-ZM-lvI"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="-447.5" y="955.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back.png" width="18" height="12"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
